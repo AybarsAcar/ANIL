@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Home </title>
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <link rel="stylesheet" href="Page1.css">
+    </head>
+   
+    
+    <body>
+        <header class="navbar">
+       
+        
+            <button class="HomeButton btn" onclick ="window.location.href='index.html'">Home</button>
+            <button class="PlatformButton btn" onclick="window.location.href='Page2.html'">TMDb - IMDb Visualisation</button>
+            <button class="CountryButton btn" onclick="window.location.href='Page3.html'">Genre - Country Visualisation</button>
+            <button class="OverviewButton btn" onclick="window.location.href='Page4.html'">Overview</button>
+        </header>
+        
+        <div class="div1">
+            <h1>Clooser Look to Movie Database Platforms and Movie Genres </h1>
+            <p>IMDb and TMDb are 2 different movie databases platforms where one can easily access a lot of information about 
+                <br>hundreds of thousands of movies. It may sound very similar with each other but in some sense they are not. 
+            </p> 
+            
+            <p>Motivation behind TMDb - IMDb visualisation is to observe effect of conflict between 2 different movie databases 
+                <br>on its user profiles. One of them is IMDb (Internet Movie Database) which is currently the most popular movie 
+                <br>database platform and the other one is TMDb (The Movie Database). The main difference between these 2 platforms
+                <br>is IMDb is a for-profit organisation whereas TMDb is a non-for-profit one. This contrast can easily create 
+                <br>a difference between the profiles of users and TMDb - IMDb visualisation aims to reveal that difference using 
+                <br>user ratings and metadata about the movies.
+            </p>
+            
+            <p>
+            Another point is to uncover the relationship between countries and movie genres that these countries are most likely
+            <br>to profit from. Every country has its own culture and accordingly own way of creating art. By examining this 
+            <br>relationship, Country - Genre visualisation aims to reveal which countries are more likely to profit from which 
+            <br>genres of movies and is there any observable relationship between geographic location of countries 
+            <br>and the movie genres that these countries are likely to profit from.
+            </p>
+            
+            <h3>References</h3>
+            <ul>
+                <li>IMDb provides up-to-date datasets for non-commercial purposes. This dataset is used to feed the visualisations.
+                    <br> <a href="https://www.imdb.com/interfaces/">IMDb Datasets</a>
+                </li>
+                <br>
+                <li>Also TMDb publishes its own dataset which is up to June 2017. Therefore only the movies released
+                <br>before October 2016 are included in visualisations.
+                <br><a href="https://grouplens.org/datasets/movielens/">TMDb Datasets</a>
+                </li>
+                <br>
+                <li>Movie Posters are simultaneously queried from OMDb API. This API is created by Brian Fritz.
+                <br>My personal API key is used to interact with the API. API key can be reached in javascript
+                <br>file by searching "&apikey=" keyword.
+                <br><a href="http://www.omdbapi.com/">OMDb API</a>
+                </li>
+                
+                
+            </ul>
+             
+
+            <div id="player">
+                <audio controls autoplay >
+                 <source src="universal.wav" >
+                </audio>
+            </div>
+            
+        </div>
+      
+        
+    </body>
+</html

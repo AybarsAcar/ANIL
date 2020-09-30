@@ -1,0 +1,142 @@
+<html>
+
+<head>
+    <script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+
+    <meta content="utf-8" http-equiv="encoding">
+    <title> Genre Country Relationship Investigation </title>
+    <!--
+        <script src="https://d3js.org/d3.v4.js"></script>
+    -->
+
+    <svg id="stacked" width="700" height="700" font-family="sans-serif" font-size="10"></svg>
+    <script src="d3-scale-radial.js"></script>
+    <script src="https://d3js.org/d3-color.v1.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <link rel="stylesheet" href="Page3.css">
+    <script src="Page3.js"></script>
+</head>
+
+<body>
+    <header class="navbar">
+       
+        
+        <button class="HomeButton btn" onclick ="window.location.href='index.html'">Home</button>
+        <button class="PlatformButton btn" onclick="window.location.href='Page2.html'">TMDb - IMDb Visualisation</button>
+        <button class="CountryButton btn" onclick="window.location.href='Page3.html'">Genre - Country Visualisation</button>
+        <button class="OverviewButton btn" onclick="window.location.href='Page4.html'">Overview</button>
+    </header>
+    <div class="selects">
+        <label>Click on a Genre to Drilldown:</label>
+        <button type="button" class="Animation" onclick="update('Animation')">Animation</button>
+        <button type="button" class="Documentary" onclick="update('Documentary')">Documentary</button>
+        <button type="button" class="Horror" onclick="update('Horror')">Horror</button>
+        <button type="button" class="Fantasy" onclick="update('Fantasy')">Fantasy</button>
+        <button type="button" class="Romance" onclick="update('Romance')">Romance</button>
+        <button type="button" class="Drama" onclick="update('Drama')">Drama</button>
+        <button type="button" class="Comedy" onclick="update('Comedy')">Comedy</button>
+        <text id="note">*** In order to drill-up, Please refresh the page.</text>
+    </div>
+
+    <svg id="tops" width="500" height="500"></svg>
+
+    <svg id="Explanation" width="400" height="300">
+        <text x="20" y="20">
+            <tspan class="Animationtitle" y=30 x=210>Animation</tspan>
+            <tspan class="Animationtext" y="40" x="20" dx="20" dy="22">Animation is the most profitable genre due to its
+                low cost</tspan>
+            <tspan class="Animationtext" x="20" dx="20" dy="22">and high popularity nowadays. Most of the top 5
+                countries</tspan>
+            <tspan class="Animationtext" x="20" dx="20" dy="22">in animation genre has a common feature as all have a
+            </tspan>
+            <tspan class="Animationtext" x="20" dx="20" dy="22">developed film industry which is a must to produce a
+                high </tspan>
+            <tspan class="Animationtext" x="20" dx="20" dy="22">quality animation movie.</tspan>
+        </text>
+        <text x="20" y="20">
+            <tspan class="Documentarytitle" y=30 x=210>Documentary</tspan>
+            <tspan class="Documentarytext" y="40" x="20" dx="20" dy="22">As expected, most of the countries are not
+                capable of </tspan>
+            <tspan class="Documentarytext" x="20" dx="20" dy="22">producing high profits from documentaries. Firstly,
+            </tspan>
+            <tspan class="Documentarytext" x="20" dx="20" dy="22">documentaries are not for profitable in general and
+                also, it</tspan>
+            <tspan class="Documentarytext" x="20" dx="20" dy="22">is a fact that general public is not as interested as
+                other genres.</tspan>
+        </text>
+
+
+        <text x="20" y="20">
+            <tspan class="Horrortitle" y=30 x=210>Horror</tspan>
+            <tspan class="Horrortext" y="40" x="20" dx="20" dy="22">European countries are ruling horror movie industry.
+            </tspan>
+            <tspan class="Horrortext" x="20" dx="20" dy="22">Around 60% of profit is produced by European countries.
+            </tspan>
+            <tspan class="Horrortext" x="20" dx="20" dy="22">Surprisingly, small country as Iceland is leading this
+                genre.</tspan>
+            <tspan class="Horrortext" x="20" dx="20" dy="22">This should be effect of being alone in the middle of
+                Atlantic :)</tspan>
+        </text>
+
+
+
+        <text x="20" y="20">
+            <tspan class="Fantasytitle" y=30 x=210>Fantasy</tspan>
+            <tspan class="Fantasytext" y="40" x="20" dx="20" dy="22">In fantasy genre, American countries are the ones
+            </tspan>
+            <tspan class="Fantasytext" x="20" dx="20" dy="22">that are profiting mostly. Although, most of the European
+            </tspan>
+            <tspan class="Fantasytext" x="20" dx="20" dy="22">and South East Asian countries are capable of making
+                profit</tspan>
+            <tspan class="Fantasytext" x="20" dx="20" dy="22">from this genre, one can claim that American countries
+            </tspan>
+            <tspan class="Fantasytext" x="20" dx="20" dy="22">are a head of the others.</tspan>
+        </text>
+
+
+        <text x="20" y="20">
+            <tspan class="Romancetitle" y=30 x=210>Romance</tspan>
+            <tspan class="Romancetext" y="40" x="20" dx="20" dy="22">Romance genre beneficiaries are quite a mix from
+                all</tspan>
+            <tspan class="Romancetext" x="20" dx="20" dy="22">continents hence It is hard to associate geography</tspan>
+            <tspan class="Romancetext" x="20" dx="20" dy="22">and success in romance movies. As seem above, </tspan>
+            <tspan class="Romancetext" x="20" dx="20" dy="22">there are 2 American, 2 Asian and a European </tspan>
+            <tspan class="Romancetext" x="20" dx="20" dy="22">countries in top 5.</tspan>
+        </text>
+
+
+
+        <text x="20" y="20">
+            <tspan class="Dramatitle" y=30 x=210>Drama</tspan>
+            <tspan class="Dramatext" y="40" x="20" dx="20" dy="22">In this genre again countries with highly developed
+            </tspan>
+            <tspan class="Dramatext" x="20" dx="20" dy="22">movie industry such as Japan, USA, Hong Kong</tspan>
+            <tspan class="Dramatext" x="20" dx="20" dy="22">and South Korea are governing. Another pattern that is
+            </tspan>
+            <tspan class="Dramatext" x="20" dx="20" dy="22">observable is that Asian countries are the</tspan>
+            <tspan class="Dramatext" x="20" dx="20" dy="22">top beneficiaries of drama movies.</tspan>
+        </text>
+
+
+        <text x="20" y="20">
+            <tspan class="Comedytitle" y=30 x=210>Comedy</tspan>
+            <tspan class="Comedytext" y="40" x="20" dx="20" dy="22">Apart from the big countries with developed</tspan>
+            <tspan class="Comedytext" x="20" dx="20" dy="22">movie industries, Poland has a surprising success</tspan>
+            <tspan class="Comedytext" x="20" dx="20" dy="22">in comedy movies. Even though Denmark is not a highly
+            </tspan>
+            <tspan class="Comedytext" x="20" dx="20" dy="22">populated country, cinema of Denmark managed to produce
+            </tspan>
+            <tspan class="Comedytext" x="20" dx="20" dy="22">world-wide known comedy movies.</tspan>
+            <tspan class="Comedytext" x="20" dx="20" dy="22">For Example; Adam’s apples, Klovn etc</tspan>
+        </text>
+
+        .
+
+
+
+
+    </svg>
+
+</body>
+
+</html

@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Platform Comparison </title>
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <link rel="stylesheet" href="Page2.css">
+        <script src="Page2.js"></script>
+    </head>
+    
+    <body>
+        
+        <header class="navbar">
+            <button class="HomeButton btn" onclick ="window.location.href='index.html'">Home</button>
+            <button class="PlatformButton btn" onclick="window.location.href='Page2.html'">TMDb - IMDb Visualisation</button>
+            <button class="CountryButton btn" onclick="window.location.href='Page3.html'">Genre - Country Visualisation</button>
+            <button class="OverviewButton btn" onclick="window.location.href='Page4.html'">Overview</button>
+        </header>    
+            
+        <svg id="main" width="960" height="600"></svg>
+        <p id="hover">***Hover on Points to see the movie posters and Information Box</p> 
+        <div id="boxesDiv">
+        <input id="checkbox1" type="checkbox" class="checkboxIMDb" value="IMDb" checked>
+            <label id="label1" for="checkbox1"><img src="imdblogo.jpeg" /></label>
+        
+        <input id="checkbox2" type="checkbox" class="checkboxTMDb" value="TMDb" checked>
+            <label for="checkbox2" id="label2"><img src="tmdblogo2.jpg"/></label>
+        </div>
+        
+            <div id="profSlider">
+            <input type="range" name="mySlider" id=mySlider min="0" max="2000000000" value="0" oninput="slider1OutId.value = mySlider.value">
+            <span class="thumb" style="left: 0px; height: 0px; width: 0px; top: 10px; margin-left: -6px;"></span>
+            
+            </div>
+        
+        <div id="ratingSlider">
+            <input type="range" name="mySlider" id=mySlider2 min="0" max="10" value="0" oninput="slider2OutId.value = mySlider2.value" >
+            <label id="labelRating"for=mySlider2>Min. Rating</label>
+            <output id="slider2OutId" for="mySlider2">0</output>
+        </div>
+        
+        
+        
+        
+        
+        
+        <div class="container" id="GenreBoxes">
+            <ul class="ks-cboxtags">
+                
+            <li><input id="checkboxOne" type="checkbox" class="checkboxGenre" value="Animation" checked>
+                <label for="checkboxOne">Animation</label></li>
+                
+            <li><input id="checkboxTwo" type="checkbox" class="checkboxGenre" value="Documentary" checked>
+                <label for="checkboxTwo">Documentary</label></li>
+                
+            <li><input id="checkboxThree" type="checkbox" class="checkboxGenre" value="Horror" checked>
+                <label for="checkboxThree">Horror</label></li>
+                
+            <li><input id="checkboxFour" type="checkbox" class="checkboxGenre" value="Fantasy" checked>
+                <label for="checkboxFour">Fantasy</label></li>
+                
+            <li><input id="checkboxFive" type="checkbox" class="checkboxGenre" value="Romance" checked>
+                <label for="checkboxFive">Romance</label></li>
+                
+            <li><input id="checkboxSix" type="checkbox" class="checkboxGenre" value="Drama" checked>
+                <label for="checkboxSix">Drama</label></li>
+                
+            <li><input id="checkboxSeven" type="checkbox" class="checkboxGenre" value="Comedy" checked>
+                <label for="checkboxSeven">Comedy</label></li>
+                
+            </ul>
+        </div>
+        
+        
+
+            <svg id="Posters" width="400" height="400" ></svg>
+
+            <svg id="Info" width="400" height="180" ></svg>
+        
+        <svg id="filterTexts" width=300 height=100></svg>
+    </body>
+</html

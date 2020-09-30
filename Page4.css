@@ -1,0 +1,102 @@
+/*Navigation Menu STARTS*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.HomeButton {
+  top: 0;
+  width: 25vw;
+  height: 30px;
+  background-color: dimgray;
+  text-emphasis-color: aliceblue;
+  border-width: 0;
+  color: aliceblue;
+}
+
+.PlatformButton {
+  top: 0;
+  width: 25vw;
+
+  height: 30px;
+  background-color: darkslategray;
+  border-width: 0;
+  color: aliceblue;
+}
+
+.CountryButton {
+  top: 0;
+  width: 25vw;
+
+  height: 30px;
+  background-color: burlywood;
+  border-width: 0;
+  color: aliceblue;
+}
+
+.OverviewButton {
+  top: 0;
+  width: 25vw;
+
+  height: 30px;
+  background-color: beige;
+  border-width: 0;
+  color: black;
+}
+/*Navigation Menu ENDS*/
+
+body {
+  background-position: bottom;
+}
+
+#div2 {
+  background-image: url(page4.png);
+  opacity: 0.2;
+  width: 1500px;
+  height: 791px;
+  position: fixed;
+  top: 30px;
+  left: 0;
+  bottom: 0;
+}
+
+#PlatformHeader {
+  position: relative;
+  left: 120px;
+  text-decoration: underline;
+}
+#GenreHeader {
+  position: relative;
+  left: 120px;
+  text-decoration: underline;
+}
+
+#div1 {
+  position: fixed;
+  top: 70px;
+  left: 570px;
+}
+
+#div4 {
+  position: fixed;
+  left: 50px;
+  top: 150px;
+  border-style: double;
+  border-width: 2px;
+}
+
+#div3 {
+  position: fixed;
+  right: 50px;
+  left: 900px;
+  top: 150px;
+  border-style: double;
+  border-width: 2px;
+}
+
+svg {
+  position: fixed;
+  top: 100px;
+  left: 300px;
+}
