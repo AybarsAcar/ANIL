@@ -1,83 +1,93 @@
 /*Navigation Menu*/
+.nav {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+
 .HomeButton {
-    position: absolute;
-    left:0;
-    top:0;
-    height: 30px;
-    background-color:dimgray;
-    width:350px;
-    text-emphasis-color: aliceblue;
-    border-width: 0;
-    color:aliceblue;   
+  top: 0;
+  width: 25vw;
+  height: 30px;
+  background-color: dimgray;
+  text-emphasis-color: aliceblue;
+  border-width: 0;
+  color: aliceblue;
 }
 
 .PlatformButton {
-    position: absolute;
-    left:350px;
-    top:0;
-    height: 30px;
-    background-color: darkslategray;
-    width:375px;
-    border-width: 0;
-    color:aliceblue;
+  top: 0;
+  width: 25vw;
+  height: 30px;
+  background-color: darkslategray;
+  border-width: 0;
+  color: aliceblue;
 }
 
 .CountryButton {
-    position: absolute;
-    left:725px;
-    top:0;
-    height: 30px;
-    background-color: burlywood;
-    width:375px;
-    border-width: 0;
-    color:aliceblue;
-    
+  top: 0;
+  width: 25vw;
+  height: 30px;
+  background-color: burlywood;
+  border-width: 0;
+  color: aliceblue;
 }
 
-.OverviewButton{
-    position: absolute;
-    left:1100px;
-    top:0;
-    height: 30px;
-    background-color: beige;
-    width:350px;
-    border-width: 0;
-    color: black;
+.OverviewButton {
+  top: 0;
+  width: 25vw;
+  height: 30px;
+  background-color: beige;
+  border-width: 0;
+  color: black;
 }
-
-
-
 
 /*Body Elements*/
-h1{
-    position: fixed;
-    top:70px;
-    left:300px;
-    color: white;
-    
+h1 {
+  top: 70px;
+  left: 300px;
+  color: white;
 }
 
-body{
-    background-image: url(back2.jpg);
-    background-repeat:no-repeat;
+body {
+  background: url(back2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: top 10%;
+  height: 100vh;
+}
+
+@media (max-width: 750) {
+  body {
+    background: url(back2.jpg);
+    background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: top 10%;
-
+    height: 150vh;
+  }
 }
 
-#div1{
-    color: white;
-    position: fixed;
-    left: 340px;
-    top: 120px;
+@media (max-width: 1200px) {
+  body {
+    background: url(back2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: top 10%;
+    height: 120vh;
+  }
 }
 
-a{
-    color: white;
+#div1 {
+  color: white;
+  width: 50vw;
+  margin: auto;
 }
 
-#music{
-    position: fixed;
-    left: 550px;
-    top:700px;
+a {
+  color: white;
+}
+
+#music {
+  left: 550px;
+  top: 700px;
 }
